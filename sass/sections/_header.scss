@@ -1,0 +1,135 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+
+.header__logo {
+    color: var(--title-text-color);
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .header__logo {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__logo {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin-left: 87px;
+    }
+    .header__item {
+        position: relative;
+        color: var(--title-text-color);
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        transition: color 250ms var(--cubic);
+
+        &:hover,
+        &:focus {
+            color: var(--acent-color);
+        }
+    }
+    .current {
+        color: var(--acent-color);
+
+        &:after {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--acent-color);
+            left: 0;
+            top: 100%;
+        }
+    }
+
+    .header__item {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+   .header__contacts a {
+       color: var(--primary-text-color);
+       font-weight: 500;
+       line-height: 1.14;
+       letter-spacing: 0.02em;
+       text-decoration: none;
+       transition: color 250ms var(--cubic);
+
+       &:hover,
+       &:focus {
+           color: var(--acent-color);
+       }
+   }
+   .header__email,
+   .contact__phone {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 10px;
+   }
+
+   .icon-mail,
+   .icon-phone {
+       fill: currentColor;
+   }
+}
+
+@media screen and (min-width: 768px) and (max-width:1199.98px) {
+    .header__contacts {
+        margin-left: auto;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    .header__email {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__list {
+        margin-left: 92px;
+    }
+    .header__contacts {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-left: auto;
+    }
+    .header__item,
+    .header__email,
+    .contact__phone {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
