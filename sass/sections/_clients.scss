@@ -1,12 +1,38 @@
+.clients__title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 30px;
+
+        @media screen and (min-width:1200px) {
+            font-size: 36px;
+            line-height: 1.17;
+            margin-bottom: 50px;
+        }
+}
+
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;
+    flex-basis: calc((100% - 2 * 15px) / 2);
+
+    @media screen and (min-width:768px) {
+        flex-basis: calc((100% - 4 * 15px) / 3);
+    }
+
+    @media screen and (min-width:1200px) {
+        align-items: center;
+        justify-content: center;    
+    }
 }
 
 .company__link {
-    width: 170px;
+    width: 210px;
     height: 92px;
     display: flex;
     align-items: center;
@@ -19,5 +45,12 @@
     &:focus {
         fill: var(--acent-color);
         border: 1px solid var(--acent-color);
+    }
+
+    @media screen and (min-width:768px) {
+        width: 226px;;
+    }
+    @media screen and (min-width:1200px) {
+        width: 170px;
     }
 }

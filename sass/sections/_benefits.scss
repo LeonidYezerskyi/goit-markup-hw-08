@@ -2,31 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    // margin: -15px;
     @media screen and (min-width:1200px) {
-        // flex-wrap: no-wrap;
         align-items: center;
         justify-content: center;
     }
 }
 
 .benefits__item {
-    // width: 450px;
     width: 100%;
     height: 226px;
-    &:not(:last-child) {
-        // margin-bottom: 30px;
-    }
 
     @media screen and (min-width:768px) {
         width: calc((100% - 2 * 15px) / 2);
-        // margin: 15px;
     }
 
     @media screen and (min-width:1200px) {
-        // width: 270px;
         width: calc((100% - 90px) / 4);
-        // margin: 0;
     }
 }
 

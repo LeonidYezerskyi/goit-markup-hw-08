@@ -57,8 +57,14 @@ p {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {
@@ -355,72 +361,115 @@ p {
 }
 
 .services {
-  padding-top: 0;
+  display: none;
 }
 
-.section__title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
+@media screen and (min-width: 1200px) {
+  .services {
+    display: flex;
+    padding-top: 0;
+  }
+  .section__title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .services__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .services__item {
+    position: relative;
+  }
+  .services__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .services__description {
+    position: absolute;
+    color: var(--hero-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    width: 370px;
+    left: 0;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
 }
-
-.services__list {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.services__item {
-  position: relative;
-}
-
-.services__img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.services__description {
-  position: absolute;
-  color: var(--hero-text-color);
-  background-color: rgba(47, 48, 58, 0.8);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  width: 370px;
-  left: 0;
-  bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
-}
-
 .team {
   background-color: var(--filter-background-color);
   margin-left: auto;
   margin-right: auto;
 }
 
-.team__item {
-  align-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.team-tittle {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team-tittle {
+    line-height: 1.17;
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .team__member {
+  width: 100%;
+  height: 622px;
   background-color: var(--hero-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team__member {
+    width: calc((100% - 30px) / 2);
+    height: 536px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__member {
+    width: calc((100% - 90px) / 4);
+    height: 428px;
+  }
+}
+
+.team__item {
+  align-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    padding-bottom: 30px;
+  }
 }
 
 .team__name {
@@ -449,15 +498,44 @@ p {
   fill: var(--hero-text-color);
 }
 
+.clients__title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients__list {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .company__link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -470,6 +548,16 @@ p {
 .company__link:hover, .company__link:focus {
   fill: var(--acent-color);
   border: 1px solid var(--acent-color);
+}
+@media screen and (min-width: 768px) {
+  .company__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .company__link {
+    width: 170px;
+  }
 }
 
 .footer {
