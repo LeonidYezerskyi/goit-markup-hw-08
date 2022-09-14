@@ -22,8 +22,8 @@
 
             <div class="header__mobile js-menu-container">
                 <button class="header__btn-close menu-btn js-close-menu">
-                    <svg width="40" heiht="40" aria-label="open menu">
-                        <use class="menu-btn__close" href="./images/icons.svg#icon-close_menu"></use>
+                    <svg class="menu__close" width="18" height="18" aria-label="close menu">
+                        <use class="menu-btn__close" href="./images/icons.svg#icon-close_menu_btn"></use>
                     </svg>
                 </button>
                 <div class="header__nav mobile-menu">
@@ -37,12 +37,12 @@
                                 <a class="menu-list__link" href="#">Контакти</a></li>
                         </ul>
                     </nav>
-                    <ul class="header__contacts contacts">
-                        <li class="contacts__item">
-                            <a class="contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <ul class="header__contacts contact">
+                        <li class="contact__item-phone">
+                            <a class="contact__link-phone" href="tel:+380961111111">+38 096 111 11 11</a>
                         </li>
-                        <li class="contacts__item">
-                            <a class="contacts__link" href="mailto:info@devstudio.com" aria-label="mail">info@devstudio.com</a>
+                        <li class="contact__item-email">
+                            <a class="contact__link-email" href="mailto:info@devstudio.com" aria-label="mail">info@devstudio.com</a>
                         </li>
                     </ul>
                 </div>
@@ -191,16 +191,16 @@
                     <li class="team__member">
                         <picture>
                             <source
-                            srcset="./images/team/mob-igor.jpg 1x, ./images/team/mob-igor2x.jpg 2x"
+                            srcset="./images/team/mob-igor.jpg 1x, ./images/team/mob-igor@2x.jpg 2x"
                             type="image/jpeg"
                             media="(max-width: 767px)"
                             />
                             <source 
-                            srcset="./images/team/tablet-igor.jpg 1x, ./images/team/tablet-igor2x.jpg 2x" 
+                            srcset="./images/team/tablet-igor.jpg 1x, ./images/team/tablet-igor@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 768px)" />
                             <source 
-                            srcset="./images/team/desk-igor.jpg 1x, ./images/team/desk-igor2x.jpg 2x" 
+                            srcset="./images/team/desk-igor.jpg 1x, ./images/team/desk-igor@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 1200px)" />
                             <img
@@ -250,15 +250,15 @@
                     <li class="team__member">
                         <picture>
                             <source 
-                            srcset="./images/team/mob-olga.jpg 1x, ./images/team/mob-olga2x.jpg 2x" 
+                            srcset="./images/team/mob-olga.jpg 1x, ./images/team/mob-olga@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(max-width: 767px)" />
                             <source 
-                            srcset="./images/team/tablet-olga.jpg 1x, ./images/team/tablet-olga2x.jpg 2x" 
+                            srcset="./images/team/tablet-olga.jpg 1x, ./images/team/tablet-olga@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 768px)" />
                             <source 
-                            srcset="./images/team/desk-olga.jpg 1x, ./images/team/desk-olga2x.jpg 2x" 
+                            srcset="./images/team/desk-olga.jpg 1x, ./images/team/desk-olga@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 1200px)" />
                             <img class="team__img" src="./images/team/mob-olga.jpg" alt="Співробітник компанії" width="270" />
@@ -301,15 +301,15 @@
                     <li class="team__member">
                         <picture>
                             <source 
-                            srcset="./images/team/mob-mykola.jpg 1x, ./images/team/mob-mykola2x.jpg 2x" 
+                            srcset="./images/team/mob-mykola.jpg 1x, ./images/team/mob-mykola@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(max-width: 767px)" />
                             <source 
-                            srcset="./images/team/tablet-mykola.jpg 1x, ./images/team/tablet-mykola2x.jpg 2x" 
+                            srcset="./images/team/tablet-mykola.jpg 1x, ./images/team/tablet-mykola@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 768px)" />
                             <source 
-                            srcset="./images/team/desk-mykola.jpg 1x, ./images/team/desk-mykola2x.jpg 2x" 
+                            srcset="./images/team/desk-mykola.jpg 1x, ./images/team/desk-mykola@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 1200px)" />
                             <img class="team__img" src="./images/team/mob-mykola.jpg" alt="Співробітник компанії" width="270" />
@@ -352,15 +352,15 @@
                     <li class="team__member">
                         <picture>
                             <source 
-                            srcset="./images/team/mob-mykhaylo.jpg 1x, ./images/team/mob-mykhaylo2x.jpg 2x" 
+                            srcset="./images/team/mob-mykhaylo.jpg 1x, ./images/team/mob-mykhaylo@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(max-width: 767px)" />
                             <source 
-                            srcset="./images/team/tablet-mykhaylo.jpg 1x, ./images/team/tablet-mykhaylo2x.jpg 2x" 
+                            srcset="./images/team/tablet-mykhaylo.jpg 1x, ./images/team/tablet-mykhaylo@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 768px)" />
                             <source 
-                            srcset="./images/team/desk-mykhaylo.jpg 1x, ./images/team/desk-mykhaylo2x.jpg 2x" 
+                            srcset="./images/team/desk-mykhaylo.jpg 1x, ./images/team/desk-mykhaylo@2x.jpg 2x" 
                             type="image/jpeg"
                             media="(min-width: 1200px)" />
                             <img class="team__img" src="./images/team/mob-mykhaylo.jpg" alt="Співробітник компанії" width="270" />
