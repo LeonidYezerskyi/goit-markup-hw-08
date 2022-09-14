@@ -84,6 +84,13 @@ p {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
 .button {
   color: var(--hero-text-color);
   background-color: var(--acent-color);
@@ -132,6 +139,14 @@ p {
   .header__logo {
     padding-top: 24px;
     padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -224,11 +239,29 @@ p {
   }
 }
 .header__mobile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transform: translateX(100%);
+  transition: transform 800ms ease;
+}
+.header__mobile.is-open {
+  transform: translateX(0%);
+}
+@media screen and (min-width: 768px) {
+  .header__mobile {
+    display: none;
+  }
 }
 
+.header__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 767.98px) {
   .header__inner {
     display: none;
@@ -236,19 +269,18 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .header__mobile {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
   .header__contacts {
     margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     padding-top: 21px;
     padding-bottom: 21px;
-  }
-  .header__contacts .header__email {
-    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -267,40 +299,17 @@ p {
   padding: 11px;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 2;
   background-color: #fff;
   border-radius: 5px;
 }
 .menu-btn .menu-btn__close {
   display: none;
 }
-.menu-btn.active .menu-btn__menu {
-  display: none;
-}
-.menu-btn.active .menu-btn__close {
-  display: block;
-}
 
-.mobile-menu {
-  display: none;
-  overflow: auto;
-}
-.mobile-menu.active {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(0, 0, 0);
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+.header__btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .menu-list__item {
