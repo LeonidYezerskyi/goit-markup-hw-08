@@ -26,8 +26,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     padding: 40px;
     border-radius: 4px;
     background-color: var(--hero-text-color);
@@ -35,16 +35,26 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms var(--cubic);
+
+    @media screen and (min-width:1200px) {
+        width: 528px;
+        height: 581px;
+        
+    }
 }
 
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     text-align: center;
     color: var(--title-text-color);
     margin-bottom: 12px;
+
+    @media screen and (min-width:1200px) {
+        line-height: 1.15;
+    }
 }
 
 .modal-form {
@@ -170,8 +180,12 @@
     height: 15px;
     border: 2px solid var(--title-text-color);
     border-radius: 3px;
-    margin-left: 12px;
+    margin-left: -15px;
     margin-right: 8px;
+
+    @media screen and (min-width:1200px) {
+        margin-left: 12px;
+    }
 }
 
 .form-agreement {
@@ -198,20 +212,30 @@
 }
 
 .checkbox-text {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     color: var(--primary-text-color);
     margin-right: 5px;
     cursor: pointer;
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .checkbox-link {
-    font-size: 14px;
-    line-height: normal;
+    font-size: 12px;
+    line-height: 1.17;
     color: --acent-color;
     border-bottom: 1px solid;
     text-decoration: none;
     cursor: pointer;
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .form-button {
