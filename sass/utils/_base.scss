@@ -22,6 +22,9 @@ p {
     letter-spacing: 0.03em;
     margin-left: auto;
     margin-right: auto;
+    &.scrol-lock {
+        overflow: hidden;
+    } 
 }
 
 .container {
