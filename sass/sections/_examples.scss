@@ -47,6 +47,7 @@
 .works-item {
     width: 450px;
     height: 404px;
+    z-index: 0;
     transition: transform 250ms var(--cubic), box-shadow 250ms var(--cubic);
     
     @media screen and (min-width:768px) {
